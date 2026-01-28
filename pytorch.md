@@ -47,3 +47,22 @@ z = x.view(-1,8)
 print(x.size(), y.size(), z.size())
 ```
 
+
+
+torch转numpy
+
+```
+a = torch.ones(5)
+b = a.numpy()
+print(b)
+```
+
+numpy转torch
+
+```
+import numpy as np
+a = np.ones(5)
+b = torch.from_numpy(a)
+print(b)
+```
+
