@@ -130,3 +130,24 @@ torch.save(model.state_dict(),'model.pk1')
 torch.load('model.pk1')
 ```
 
+
+
+![image-20260202191137932](pytorch.assets/image-20260202191137932.png)
+
+
+
+pytorch的hub模块，直接调用别人的模型
+
+[PyTorch HubFor Researchers – PyTorch](https://pytorch.org/hub/)
+
+```python
+import torch
+model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=True)
+# or any of these variants
+# model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet34', pretrained=True)
+# model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet50', pretrained=True)
+# model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet101', pretrained=True)
+# model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet152', pretrained=True)
+model.eval()
+```
+
